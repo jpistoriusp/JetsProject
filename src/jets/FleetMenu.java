@@ -29,6 +29,7 @@ public class FleetMenu {
 				showhang.displayHangar(jetArray);
 				break;
 			case 2:
+				showhang.fastestJet(jetArray);
 				break;
 			case 3:
 				break;

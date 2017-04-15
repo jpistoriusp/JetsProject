@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Hangar {
 	Jet[] jet = new Jet[100];
 
-	public Jet[] initialLoad(){
+	public Jet[] initialLoad() {
 		jet[0] = new Jet("Big Billy", 1.05, 1500, 700);
 		jet[1] = new Jet("Small Sammy", .60, 900, 50);
 		jet[2] = new Jet("Midsize Mary", .86, 1300, 300);
@@ -13,7 +13,31 @@ public class Hangar {
 		jet[4] = new Jet("Petite Pauly", .56, 800, 25);
 		return jet;
 	}
+
+	public void fastestJet(Jet[] jets) {
+		Jet fastest = new Jet();
+		for (int i = 0; i < jets.length; i++) {
+			if (jets[i] != null) {
+				if (jets[i].getSpeed() > fastest.getSpeed()) {
+					fastest = jets[i];
+				}
+			}
+		}
+		System.out.println("Fastest jet: " + fastest.toString());
+	}
 	
+	public void fastestJet(Jet[] jets) {
+		Jet fastest = new Jet();
+		for (int i = 0; i < jets.length; i++) {
+			if (jets[i] != null) {
+				if (jets[i].getSpeed() > fastest.getSpeed()) {
+					fastest = jets[i];
+				}
+			}
+		}
+		System.out.println("Fastest jet: " + fastest.toString());
+	}
+
 	public void displayHangar(Jet[] jets) {
 		for (int i = 0; i < jets.length; i++) {
 			if (jets[i] != null) {
@@ -22,10 +46,10 @@ public class Hangar {
 		}
 	}
 
-	public Jet[]  newJet(Jet[] jets) {
+	public Jet[] newJet(Jet[] jets) {
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter jet model: ");
-      	String model = kb.next();
+		String model = kb.next();
 		System.out.println("Enter jet speed (mph): ");
 		double mphSpeed = kb.nextDouble();
 		MachCalc mm = new MachCalc();
@@ -34,15 +58,14 @@ public class Hangar {
 		int range = kb.nextInt();
 		System.out.println("Enter jet price: ");
 		int price = kb.nextInt();
-		Jet jet = new Jet(model, speed, range,price);
+		Jet jet = new Jet(model, speed, range, price);
 		for (int i = 0; i < jets.length; i++) {
-			if (jets[i] == null){
+			if (jets[i] == null) {
 				jets[i] = jet;
 				break;
 			}
 		}
 		return jets;
 	}
-
 
 }
