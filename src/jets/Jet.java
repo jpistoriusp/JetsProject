@@ -1,6 +1,6 @@
 package jets;
 
-public class Jet {
+public class Jet extends Hangar{
 
 	private String model;
 	private double speed;
@@ -12,10 +12,6 @@ public class Jet {
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
-	}
-	
-	public void CreateJet() {
-		
 	}
 	
 	public String getModel() {
@@ -48,6 +44,21 @@ public class Jet {
 
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Jet [model=");
+		builder.append(model);
+		builder.append(", speed=");
+		builder.append(speed);
+		builder.append(", range=");
+		builder.append(range);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append("]");
+		return builder.toString();
 	}
 	
 }

@@ -1,10 +1,9 @@
 package jets;
 
-public class MphtoMach {
+public class MachCalc {
 
 	public double mphToMach(double mph) {
 		double mach = mph/767.269;
 		return mach;
 	}
-	
 }
