@@ -3,13 +3,20 @@ package jets;
 public class Jet extends Hangar{
 
 	private String model;
-	private double speed;
+	private float speed;
 	private int range, price;
 
 	public Jet() {}
-	public Jet(String model, double speed, int range, int price) {
+	public Jet(String model, float speed, int range, int price) {
 		this.model = model;
-		this.speed = speed;
+		this.speed = speed * 0.00131f;
+		this.range = range;
+		this.price = price;
+	}
+	
+	public Jet(String model, float speed, int range, int price, String pilot) {
+		this.model = model;
+		this.speed = speed * 0.00131f;
 		this.range = range;
 		this.price = price;
 	}
@@ -26,8 +33,8 @@ public class Jet extends Hangar{
 		return speed;
 	}
 
-	public void setSpeed(double speed) {
-		this.speed = speed;
+	public void setSpeed(float speed) {
+		this.speed = speed*0.00131f;
 	}
 
 	public int getRange() {
@@ -49,13 +56,13 @@ public class Jet extends Hangar{
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Jet [model=");
+		builder.append("Jet [model= ");
 		builder.append(model);
-		builder.append(", speed=");
+		builder.append(", speed(Machs)= ");
 		builder.append(speed);
-		builder.append(", range=");
+		builder.append(", range= ");
 		builder.append(range);
-		builder.append(", price=");
+		builder.append(", price= $");
 		builder.append(price);
 		builder.append("]");
 		return builder.toString();
