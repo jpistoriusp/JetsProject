@@ -32,6 +32,7 @@ public class FleetMenu {
 				showhang.fastestJet(jetArray);
 				break;
 			case 3:
+				showhang.longestRangeJet(jetArray);
 				break;
 			case 4:
 				jetArray = showhang.newJet(jetArray);
@@ -42,7 +43,4 @@ public class FleetMenu {
 
 	}
 
-	public void addJet() {
-
-	}
 }

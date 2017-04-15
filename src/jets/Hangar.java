@@ -26,16 +26,16 @@ public class Hangar {
 		System.out.println("Fastest jet: " + fastest.toString());
 	}
 	
-	public void fastestJet(Jet[] jets) {
-		Jet fastest = new Jet();
+	public void longestRangeJet(Jet[] jets) {
+		Jet longest = new Jet();
 		for (int i = 0; i < jets.length; i++) {
 			if (jets[i] != null) {
-				if (jets[i].getSpeed() > fastest.getSpeed()) {
-					fastest = jets[i];
+				if (jets[i].getRange() > longest.getRange()) {
+					longest = jets[i];
 				}
 			}
 		}
-		System.out.println("Fastest jet: " + fastest.toString());
+		System.out.println("Longest range jet: " + longest.toString());
 	}
 
 	public void displayHangar(Jet[] jets) {
