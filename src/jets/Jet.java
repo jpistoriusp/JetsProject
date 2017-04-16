@@ -73,7 +73,7 @@ public class Jet extends Hangar{
 	
 	public String randomPilot() {
 		String nameA[] = {"Ryan", "Ben", "Sebastian", "Paul", "Nancy", "Eric", "Mike", "Jacob", "Miles"};
-		int i = (int)((Math.random()*5));
+		int i = (int)((Math.random()*8));
 		return nameA[i];
 	}
 	
