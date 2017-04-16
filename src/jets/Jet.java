@@ -60,7 +60,7 @@ public class Jet extends Hangar{
 		builder.append(model);
 		builder.append(", speed(Machs)= ");
 		builder.append(speed);
-		builder.append(", range= ");
+		builder.append(", range(Miles)= ");
 		builder.append(range);
 		builder.append(", price= $");
 		builder.append(price);

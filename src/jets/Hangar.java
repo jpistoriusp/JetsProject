@@ -6,11 +6,11 @@ public class Hangar {
 	Jet[] jet = new Jet[100];
 
 	public Jet[] initialLoad() {
-		jet[0] = new Jet("Big Billy", 1.05, 1500, 700_000_000);
-		jet[1] = new Jet("Small Sammy", .60, 900, 50_000_000);
-		jet[2] = new Jet("Midsize Mary", .86, 1300, 300_000_000);
-		jet[3] = new Jet("Large Larry", .98, 1400, 400_000_000);
-		jet[4] = new Jet("Petite Pauly", .56, 800, 25_000_000);
+		jet[0] = new Jet("Big Billy", 900f, 1500, 700_000_000);
+		jet[1] = new Jet("Small Sammy", 500f, 900, 50_000_000);
+		jet[2] = new Jet("Midsize Mary", 750f, 1300, 300_000_000);
+		jet[3] = new Jet("Large Larry", 870f, 1400, 400_000_000);
+		jet[4] = new Jet("Petite Pauly", 550f, 800, 25_000_000);
 		return jet;
 	}
 
@@ -51,9 +51,7 @@ public class Hangar {
 		System.out.println("Enter jet model: ");
 		String model = kb.next();
 		System.out.println("Enter jet speed (mph): ");
-		float mphSpeed = kb.nextFloat();
-		MachCalc mm = new MachCalc();
-		float speed = mm.mphToMach(mphSpeed);
+		float speed = kb.nextFloat();
 		System.out.println("Enter jet range (mi): ");
 		int range = kb.nextInt();
 		System.out.println("Enter jet price: ");
