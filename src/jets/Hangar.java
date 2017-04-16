@@ -49,7 +49,7 @@ public class Hangar {
 	public Jet[] newJet(Jet[] jets) {
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Enter jet model: ");
-		String model = kb.next();
+		String model = kb.nextLine();
 		System.out.println("Enter jet speed (mph): ");
 		float speed = kb.nextFloat();
 		System.out.println("Enter jet range (mi): ");
