@@ -11,7 +11,6 @@ public class FleetMenu {
 	public void start() {
 	
 		Scanner kb = new Scanner(System.in);
-		Hangar[] PaulsHangar = new Hangar[5];
 		int choice = 0;
 		Hangar showhang = new Hangar();
 		Jet jetArray[] = showhang.initialLoad();

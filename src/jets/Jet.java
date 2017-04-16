@@ -2,16 +2,17 @@ package jets;
 
 public class Jet extends Hangar{
 
-	private String model;
+	private String model, pilot;
 	private float speed;
 	private int range, price;
-
+	
 	public Jet() {}
 	public Jet(String model, float speed, int range, int price) {
 		this.model = model;
 		this.speed = speed * 0.00131f;
 		this.range = range;
 		this.price = price;
+		this.pilot = randomPilot();
 	}
 	
 	public Jet(String model, float speed, int range, int price, String pilot) {
@@ -19,6 +20,7 @@ public class Jet extends Hangar{
 		this.speed = speed * 0.00131f;
 		this.range = range;
 		this.price = price;
+		this.pilot = pilot;
 	}
 	
 	public String getModel() {
@@ -56,16 +58,23 @@ public class Jet extends Hangar{
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Jet [model= ");
+		builder.append("Jet Model= ");
 		builder.append(model);
-		builder.append(", speed(Machs)= ");
+		builder.append(", Speed(Machs)= ");
 		builder.append(speed);
-		builder.append(", range(Miles)= ");
+		builder.append(", Range(Miles)= ");
 		builder.append(range);
-		builder.append(", price= $");
+		builder.append(", Price= $");
 		builder.append(price);
-		builder.append("]");
+		builder.append(", Pilot's Name= ");
+		builder.append(pilot);
 		return builder.toString();
+	}
+	
+	public String randomPilot() {
+		String nameA[] = {"Ryan", "Ben", "Sebastian", "Paul", "Nancy", "Eric", "Mike", "Jacob", "Miles"};
+		int i = (int)((Math.random()*5));
+		return nameA[i];
 	}
 	
 }

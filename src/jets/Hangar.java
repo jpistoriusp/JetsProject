@@ -6,11 +6,11 @@ public class Hangar {
 	Jet[] jet = new Jet[100];
 
 	public Jet[] initialLoad() {
-		jet[0] = new Jet("Big Billy", 900f, 1500, 700_000_000);
-		jet[1] = new Jet("Small Sammy", 500f, 900, 50_000_000);
-		jet[2] = new Jet("Midsize Mary", 750f, 1300, 300_000_000);
-		jet[3] = new Jet("Large Larry", 870f, 1400, 400_000_000);
-		jet[4] = new Jet("Petite Pauly", 550f, 800, 25_000_000);
+		jet[0] = new Jet("Bombardier Challenger 300", 528f, 3500, 26_000_000, "Henry");
+		jet[1] = new Jet("Gulfstream G650", 610f, 8050, 65_000_000, "Sue");
+		jet[2] = new Jet("Embraer Phenom 100", 537f, 1350, 4_000_000, "Bobby");
+		jet[3] = new Jet("Cessna Citation X", 717f, 3700, 23_000_000, "Frank");
+		jet[4] = new Jet("Cessna Citation Mustang", 483f, 1340, 3_000_000, "Mary");
 		return jet;
 	}
 
@@ -56,6 +56,9 @@ public class Hangar {
 		int range = kb.nextInt();
 		System.out.println("Enter jet price: ");
 		int price = kb.nextInt();
+		System.out.println("Press [enter] to assign a random pilot : ");
+		kb.nextLine();
+		kb.nextLine();
 		Jet jet = new Jet(model, speed, range, price);
 		for (int i = 0; i < jets.length; i++) {
 			if (jets[i] == null) {
