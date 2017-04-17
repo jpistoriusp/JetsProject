@@ -35,7 +35,6 @@ public class FleetMenu {
 				break;
 			case 4:
 				jetArray = showhang.newJet(jetArray);
-				showhang.displayHangar(jetArray);
 				break;
 			}
 		}

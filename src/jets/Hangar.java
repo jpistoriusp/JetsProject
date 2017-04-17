@@ -56,7 +56,7 @@ public class Hangar {
 		int range = kb.nextInt();
 		System.out.println("Enter jet price: ");
 		int price = kb.nextInt();
-		System.out.println("Press [enter] to assign a random pilot : ");
+		System.out.println("Press [enter] to assign a random qualified pilot to the jet : ");
 		kb.nextLine();
 		kb.nextLine();
 		Jet jet = new Jet(model, speed, range, price);
